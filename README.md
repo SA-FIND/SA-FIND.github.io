@@ -31,7 +31,7 @@ The visual identity follows a **Material Design 3** inspired system documented i
 
 ## Deployment
 
-Hosted on **GitHub Pages**. Pushes to `main` deploy automatically.
+Hosted on **GitHub Pages**.
 
 ## Contact
 
