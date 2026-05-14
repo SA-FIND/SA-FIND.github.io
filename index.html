@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
   <title>Solomon Ahedor — Metallurgical Engineer & Materials Researcher</title>
   <meta name="description"
     content="Portfolio of Solomon Ahedor — Metallurgical Engineering student at KNUST, working at the intersection of materials science, AI, and sustainable engineering.">
@@ -359,14 +360,14 @@
       </p>
 
       <div class="contact-links reveal reveal-delay-2">
-        <a href="mailto:ahedorsolomon@gmail.com" class="contact-link">Email</a>
-        <a href="https://x.com/safinderr" class="contact-link" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="#" id="email-link-1" class="contact-link">Email</a>
+        <a href="https://x.com/safinderr" class="contact-link" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
         <a href="https://github.com/SA-FIND/safind.github.io" class="contact-link" target="_blank"
-          rel="noopener">GitHub</a>
+          rel="noopener noreferrer">GitHub</a>
         <a href="SOLOMON_AHEDOR_RESUME.pdf" class="contact-link" download>Download CV</a>
       </div>
 
-      <a href="mailto:ahedorsolomon@gmail.com" class="btn btn-primary reveal reveal-delay-3">Say Hello</a>
+      <a href="#" id="email-link-2" class="btn btn-primary reveal reveal-delay-3">Say Hello</a>
     </div>
   </section>
 
@@ -432,6 +433,15 @@
     document.querySelectorAll('.reveal, .exp-item').forEach(el => {
       observer.observe(el);
     });
+
+    // Email obfuscation
+    const user = 'ahedorsolomon';
+    const domain = 'gmail.com';
+    const emailHref = `mailto:${user}@${domain}`;
+    const emailLink1 = document.getElementById('email-link-1');
+    const emailLink2 = document.getElementById('email-link-2');
+    if (emailLink1) emailLink1.href = emailHref;
+    if (emailLink2) emailLink2.href = emailHref;
   </script>
 </body>
 
