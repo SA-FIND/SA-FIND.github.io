@@ -1,6 +1,6 @@
 # Solomon Ahedor — Portfolio
 
-Personal portfolio for **Solomon Ahedor**, a final-year Metallurgical Engineering student at KNUST, Ghana, working at the intersection of materials science, AI, and sustainable engineering.
+**Solomon Ahedor**, a final-year Metallurgical Engineering student at KNUST, Ghana, working at the intersection of materials science, AI, and sustainable engineering.
 
 🌐 **[sa-find.github.io](https://sa-find.github.io)**
 
@@ -28,16 +28,6 @@ The visual identity follows a **Material Design 3** inspired system documented i
 ├── Prophoto.png                  Headshot
 └── SOLOMON_AHEDOR_RESUME.pdf     CV
 ```
-
-## Deployment
-
-Hosted on **GitHub Pages**.
-
-## Contact
-
-**Email** — [ahedorsolomon@gmail.com](mailto:ahedorsolomon@gmail.com)
-**X** — [@safinderr](https://x.com/safinderr)
-**GitHub** — [SA-FIND](https://github.com/SA-FIND)
 
 ---
 
