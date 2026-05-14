@@ -1,33 +1,33 @@
 /* ══════════════════════════════════════════════════
-   LIQUID GLASS — Metallurgical Forge & Architectural
+   LIQUID GLASS — Gold & Nickel Theme
    Dark/Light mode with Apple-style frosted glass
    ══════════════════════════════════════════════════ */
 :root {
-  --bg: #0B0C10;
-  /* Deep Carbon */
-  --bg-elevated: #1F2833;
-  /* Gunmetal */
+  --bg: #1A1C1F;
+  /* Dark Nickel / Gunmetal */
+  --bg-elevated: #282B30;
+  /* Lighter Nickel */
   --surface: rgba(255, 255, 255, 0.03);
-  --surface-glass: rgba(31, 40, 51, 0.45);
-  --surface-glass-hover: rgba(31, 40, 51, 0.65);
-  --gold: #B8422E;
-  /* Boston Clay / Hot Iron */
-  --gold-dim: rgba(184, 66, 46, 0.15);
-  --gold-glow: rgba(184, 66, 46, 0.25);
-  --blue: #45A29E;
-  /* Oxidized Patina */
-  --teal: #66FCF1;
-  /* Arc Spark */
+  --surface-glass: rgba(40, 43, 48, 0.45);
+  --surface-glass-hover: rgba(40, 43, 48, 0.65);
+  --gold: #D4AF37;
+  /* Classic Gold */
+  --gold-dim: rgba(212, 175, 55, 0.15);
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --blue: #86888A;
+  /* Nickel Accent */
+  --teal: #F5F5F5;
+  /* Bright Silver */
   --green: #2ecc71;
-  --text: #C5C6C7;
-  /* Silver / Steel */
-  --text-muted: #8A9A9D;
-  --text-dim: #606A6C;
+  --text: #E5E7E8;
+  /* Silver / Bright Nickel */
+  --text-muted: #A3A6A8;
+  --text-dim: #7B7D80;
   --border-glass: rgba(255, 255, 255, 0.08);
   --border-glass-strong: rgba(255, 255, 255, 0.15);
-  --nav-bg: rgba(11, 12, 16, 0.55);
-  --nav-bg-scroll: rgba(11, 12, 16, 0.85);
-  --photo-fade: rgba(11, 12, 16, 0.5);
+  --nav-bg: rgba(26, 28, 31, 0.55);
+  --nav-bg-scroll: rgba(26, 28, 31, 0.85);
+  --photo-fade: rgba(26, 28, 31, 0.5);
   --overlay-bg: rgba(0, 0, 0, 0.5);
   --refraction: rgba(255, 255, 255, 0.15);
   --refraction-soft: rgba(255, 255, 255, 0.05);
@@ -42,30 +42,30 @@
   --r-full: 100px;
 }
 
-/* ── LIGHT MODE — Limestone & Cast Iron ──────── */
+/* ── LIGHT MODE — Bright Nickel & Gold ──────── */
 [data-theme="light"] {
-  --bg: #F7F5F2;
-  /* Warm Limestone */
-  --bg-elevated: #E8EAE6;
-  /* Brushed Aluminum */
+  --bg: #F0F2F5;
+  /* Bright Nickel */
+  --bg-elevated: #E3E6E8;
+  /* Brushed Nickel */
   --surface: rgba(0, 0, 0, 0.02);
-  --surface-glass: rgba(247, 245, 242, 0.65);
-  --surface-glass-hover: rgba(247, 245, 242, 0.85);
-  --gold: #B8422E;
-  /* Boston Clay */
-  --gold-dim: rgba(184, 66, 46, 0.12);
-  --gold-glow: rgba(184, 66, 46, 0.2);
-  --text: #1A1C1E;
-  /* Deep Ink / Cast Iron */
-  --text-muted: #6C7278;
+  --surface-glass: rgba(240, 242, 245, 0.65);
+  --surface-glass-hover: rgba(240, 242, 245, 0.85);
+  --gold: #B8941E;
+  /* Deeper Gold for Contrast */
+  --gold-dim: rgba(184, 148, 30, 0.12);
+  --gold-glow: rgba(184, 148, 30, 0.2);
+  --text: #2D3136;
+  /* Dark Nickel / Charcoal */
+  --text-muted: #6C7175;
   /* Slate */
-  --text-dim: #9FA6AC;
+  --text-dim: #9FA4A8;
   --border-glass: rgba(0, 0, 0, 0.08);
   --border-glass-strong: rgba(0, 0, 0, 0.15);
-  --nav-bg: rgba(247, 245, 242, 0.6);
-  --nav-bg-scroll: rgba(247, 245, 242, 0.85);
-  --photo-fade: rgba(247, 245, 242, 0.3);
-  --overlay-bg: rgba(26, 28, 30, 0.15);
+  --nav-bg: rgba(240, 242, 245, 0.6);
+  --nav-bg-scroll: rgba(240, 242, 245, 0.85);
+  --photo-fade: rgba(240, 242, 245, 0.3);
+  --overlay-bg: rgba(45, 49, 54, 0.15);
   --refraction: rgba(255, 255, 255, 0.8);
   --refraction-soft: rgba(255, 255, 255, 0.4);
 }
@@ -520,7 +520,7 @@ section {
 .hero-name em {
   font-style: italic;
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #D95C41);
+  background: linear-gradient(135deg, var(--gold), #E5C558);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -998,7 +998,7 @@ section {
 .contact-heading em {
   font-style: italic;
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #D95C41);
+  background: linear-gradient(135deg, var(--gold), #E5C558);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
