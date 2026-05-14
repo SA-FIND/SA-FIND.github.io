@@ -8,7 +8,7 @@ Personal portfolio for **Solomon Ahedor**, a final-year Metallurgical Engineerin
 
 ## Overview
 
-This site presents selected research, engineering projects, and professional experience — from froth flotation optimisation with machine learning to biomass-derived water filtration systems. Built as a static site with no frameworks or dependencies.
+This site presents selected research, engineering projects, and professional experience from froth flotation optimisation with machine learning to biomass-derived water filtration systems.
 
 ## Design
 
