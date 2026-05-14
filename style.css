@@ -1,30 +1,30 @@
 /* ══════════════════════════════════════════════════
-   LIQUID GLASS — Industrial Modern + Gold Accent
+   LIQUID GLASS — Metallurgical Forge & Architectural
    Dark/Light mode with Apple-style frosted glass
    ══════════════════════════════════════════════════ */
 :root {
-  --bg: #0F1215;
-  --bg-elevated: #1B1F23;
-  --surface: rgba(255,255,255,0.04);
-  --surface-glass: rgba(255,255,255,0.06);
-  --surface-glass-hover: rgba(255,255,255,0.09);
-  --gold: #D4AF37;
-  --gold-dim: rgba(212,175,55,0.15);
-  --gold-glow: rgba(212,175,55,0.25);
-  --blue: #0056B3;
-  --teal: #00CEC9;
-  --green: #44BD32;
-  --text: #E1E4E8;
-  --text-muted: #8B949E;
-  --text-dim: #484F58;
+  --bg: #0B0C10; /* Deep Carbon */
+  --bg-elevated: #1F2833; /* Gunmetal */
+  --surface: rgba(255,255,255,0.03);
+  --surface-glass: rgba(31, 40, 51, 0.45);
+  --surface-glass-hover: rgba(31, 40, 51, 0.65);
+  --gold: #B8422E; /* Boston Clay / Hot Iron */
+  --gold-dim: rgba(184, 66, 46, 0.15);
+  --gold-glow: rgba(184, 66, 46, 0.25);
+  --blue: #45A29E; /* Oxidized Patina */
+  --teal: #66FCF1; /* Arc Spark */
+  --green: #2ecc71;
+  --text: #C5C6C7; /* Silver / Steel */
+  --text-muted: #8A9A9D;
+  --text-dim: #606A6C;
   --border-glass: rgba(255,255,255,0.08);
-  --border-glass-strong: rgba(255,255,255,0.12);
-  --nav-bg: rgba(15,18,21,0.55);
-  --nav-bg-scroll: rgba(15,18,21,0.75);
-  --photo-fade: rgba(15,18,21,0.5);
-  --overlay-bg: rgba(0,0,0,0.4);
-  --refraction: rgba(255,255,255,0.12);
-  --refraction-soft: rgba(255,255,255,0.06);
+  --border-glass-strong: rgba(255,255,255,0.15);
+  --nav-bg: rgba(11, 12, 16, 0.55);
+  --nav-bg-scroll: rgba(11, 12, 16, 0.85);
+  --photo-fade: rgba(11, 12, 16, 0.5);
+  --overlay-bg: rgba(0,0,0,0.5);
+  --refraction: rgba(255,255,255,0.15);
+  --refraction-soft: rgba(255,255,255,0.05);
   --font: 'Manrope', system-ui, -apple-system, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -36,27 +36,27 @@
   --r-full: 100px;
 }
 
-/* ── LIGHT MODE — Silicon & Silica ───────────── */
+/* ── LIGHT MODE — Limestone & Cast Iron ──────── */
 [data-theme="light"] {
-  --bg: #FFFFFF;
-  --bg-elevated: #F5F6FA;
+  --bg: #F7F5F2; /* Warm Limestone */
+  --bg-elevated: #E8EAE6; /* Brushed Aluminum */
   --surface: rgba(0,0,0,0.02);
-  --surface-glass: rgba(255,255,255,0.65);
-  --surface-glass-hover: rgba(255,255,255,0.8);
-  --gold: #B8941E;
-  --gold-dim: rgba(184,148,30,0.12);
-  --gold-glow: rgba(184,148,30,0.2);
-  --text: #2D3436;
-  --text-muted: #636E72;
-  --text-dim: #B2BEC3;
-  --border-glass: rgba(0,0,0,0.06);
-  --border-glass-strong: rgba(0,0,0,0.1);
-  --nav-bg: rgba(255,255,255,0.6);
-  --nav-bg-scroll: rgba(255,255,255,0.8);
-  --photo-fade: rgba(255,255,255,0.3);
-  --overlay-bg: rgba(0,0,0,0.15);
-  --refraction: rgba(255,255,255,0.6);
-  --refraction-soft: rgba(255,255,255,0.3);
+  --surface-glass: rgba(247, 245, 242, 0.65);
+  --surface-glass-hover: rgba(247, 245, 242, 0.85);
+  --gold: #B8422E; /* Boston Clay */
+  --gold-dim: rgba(184, 66, 46, 0.12);
+  --gold-glow: rgba(184, 66, 46, 0.2);
+  --text: #1A1C1E; /* Deep Ink / Cast Iron */
+  --text-muted: #6C7278; /* Slate */
+  --text-dim: #9FA6AC;
+  --border-glass: rgba(0,0,0,0.08);
+  --border-glass-strong: rgba(0,0,0,0.15);
+  --nav-bg: rgba(247, 245, 242, 0.6);
+  --nav-bg-scroll: rgba(247, 245, 242, 0.85);
+  --photo-fade: rgba(247, 245, 242, 0.3);
+  --overlay-bg: rgba(26, 28, 30, 0.15);
+  --refraction: rgba(255,255,255,0.8);
+  --refraction-soft: rgba(255,255,255,0.4);
 }
 
 /* ── RESET ───────────────────────────────────── */
@@ -92,21 +92,21 @@ img { max-width: 100%; display: block; }
 
 .mesh-orb--gold {
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--gold-dim) 0%, transparent 70%);
   top: -10%; right: -5%;
   animation-delay: 0s;
 }
 
 .mesh-orb--blue {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(0,86,179,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(69, 162, 158, 0.1) 0%, transparent 70%);
   bottom: 10%; left: -8%;
   animation-delay: -7s;
 }
 
 .mesh-orb--teal {
   width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(0,206,201,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(102, 252, 241, 0.08) 0%, transparent 70%);
   top: 40%; left: 30%;
   animation-delay: -14s;
 }
@@ -320,7 +320,7 @@ section { padding: 5rem 0; }
 
 .hero-name em {
   font-style: italic; font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #F0D060);
+  background: linear-gradient(135deg, var(--gold), #D95C41);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -617,7 +617,7 @@ section { padding: 5rem 0; }
 
 .contact-heading em {
   font-style: italic; font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #F0D060);
+  background: linear-gradient(135deg, var(--gold), #D95C41);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
