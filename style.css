@@ -1,30 +1,30 @@
 /* ══════════════════════════════════════════════════
-   LIQUID GLASS — Industrial Modern + Gold Accent
-   Dark/Light mode with Apple-style frosted glass
+   LIQUID GLASS — AngloGold Ashanti Mine Inspired
+   Dark/Light mode with mineshaft depth & bullion gold
    ══════════════════════════════════════════════════ */
 :root {
-  --bg: #0F1215;
-  --bg-elevated: #1B1F23;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-glass: rgba(255, 255, 255, 0.06);
-  --surface-glass-hover: rgba(255, 255, 255, 0.09);
-  --gold: #D4AF37;
-  --gold-dim: rgba(212, 175, 55, 0.15);
-  --gold-glow: rgba(212, 175, 55, 0.25);
-  --blue: #0056B3;
-  --teal: #00CEC9;
-  --green: #44BD32;
-  --text: #E1E4E8;
-  --text-muted: #8B949E;
-  --text-dim: #484F58;
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-glass-strong: rgba(255, 255, 255, 0.12);
-  --nav-bg: rgba(15, 18, 21, 0.55);
-  --nav-bg-scroll: rgba(15, 18, 21, 0.75);
-  --photo-fade: rgba(15, 18, 21, 0.5);
-  --overlay-bg: rgba(0, 0, 0, 0.4);
-  --refraction: rgba(255, 255, 255, 0.12);
-  --refraction-soft: rgba(255, 255, 255, 0.06);
+  --bg: #0D0E0A;
+  --bg-elevated: #1A1B15;
+  --surface: rgba(200, 163, 77, 0.03);
+  --surface-glass: rgba(200, 163, 77, 0.05);
+  --surface-glass-hover: rgba(200, 163, 77, 0.09);
+  --gold: #C8A34D;
+  --gold-dim: rgba(200, 163, 77, 0.15);
+  --gold-glow: rgba(200, 163, 77, 0.30);
+  --ore: #8B3A2E;
+  --pyrite: #6B8C5A;
+  --green: #7A9E68;
+  --text: #DDD8CB;
+  --text-muted: #8A8473;
+  --text-dim: #504B3F;
+  --border-glass: rgba(200, 163, 77, 0.08);
+  --border-glass-strong: rgba(200, 163, 77, 0.14);
+  --nav-bg: rgba(13, 14, 10, 0.60);
+  --nav-bg-scroll: rgba(13, 14, 10, 0.82);
+  --photo-fade: rgba(13, 14, 10, 0.5);
+  --overlay-bg: rgba(0, 0, 0, 0.45);
+  --refraction: rgba(200, 163, 77, 0.10);
+  --refraction-soft: rgba(200, 163, 77, 0.05);
   --font: 'Manrope', system-ui, -apple-system, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -36,27 +36,27 @@
   --r-full: 100px;
 }
 
-/* ── LIGHT MODE — Silicon & Silica ───────────── */
+/* ── LIGHT MODE — Ashanti Sandstone & Parchment ─ */
 [data-theme="light"] {
-  --bg: #FFFFFF;
-  --bg-elevated: #F5F6FA;
-  --surface: rgba(0, 0, 0, 0.02);
-  --surface-glass: rgba(255, 255, 255, 0.65);
-  --surface-glass-hover: rgba(255, 255, 255, 0.8);
-  --gold: #B8941E;
-  --gold-dim: rgba(184, 148, 30, 0.12);
-  --gold-glow: rgba(184, 148, 30, 0.2);
-  --text: #2D3436;
-  --text-muted: #636E72;
-  --text-dim: #B2BEC3;
-  --border-glass: rgba(0, 0, 0, 0.06);
-  --border-glass-strong: rgba(0, 0, 0, 0.1);
-  --nav-bg: rgba(255, 255, 255, 0.6);
-  --nav-bg-scroll: rgba(255, 255, 255, 0.8);
-  --photo-fade: rgba(255, 255, 255, 0.3);
+  --bg: #FAF7F0;
+  --bg-elevated: #EFE9DC;
+  --surface: rgba(139, 58, 46, 0.03);
+  --surface-glass: rgba(250, 247, 240, 0.70);
+  --surface-glass-hover: rgba(250, 247, 240, 0.85);
+  --gold: #A6832A;
+  --gold-dim: rgba(166, 131, 42, 0.12);
+  --gold-glow: rgba(166, 131, 42, 0.22);
+  --text: #2A2517;
+  --text-muted: #6B6150;
+  --text-dim: #B5AB98;
+  --border-glass: rgba(42, 37, 23, 0.08);
+  --border-glass-strong: rgba(42, 37, 23, 0.13);
+  --nav-bg: rgba(250, 247, 240, 0.65);
+  --nav-bg-scroll: rgba(250, 247, 240, 0.85);
+  --photo-fade: rgba(250, 247, 240, 0.35);
   --overlay-bg: rgba(0, 0, 0, 0.15);
-  --refraction: rgba(255, 255, 255, 0.6);
-  --refraction-soft: rgba(255, 255, 255, 0.3);
+  --refraction: rgba(200, 163, 77, 0.15);
+  --refraction-soft: rgba(200, 163, 77, 0.08);
 }
 
 /* ── RESET ───────────────────────────────────── */
@@ -119,13 +119,18 @@ img {
 }
 
 .mesh-orb--gold {
-  display: none;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(200, 163, 77, 0.06) 0%, transparent 70%);
+  top: -10%;
+  right: -15%;
+  animation-delay: -3s;
 }
 
 .mesh-orb--blue {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 86, 179, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 58, 46, 0.05) 0%, transparent 70%);
   bottom: 10%;
   left: -8%;
   animation-delay: -7s;
@@ -134,7 +139,7 @@ img {
 .mesh-orb--teal {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 206, 201, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(107, 140, 90, 0.04) 0%, transparent 70%);
   top: 40%;
   left: 30%;
   animation-delay: -14s;
@@ -450,7 +455,7 @@ section {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 4px 24px var(--gold-glow), 0 0 60px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 4px 24px var(--gold-glow), 0 0 60px rgba(200, 163, 77, 0.12);
   transform: translateY(-1px);
 }
 
@@ -504,7 +509,7 @@ section {
 .hero-name em {
   font-style: italic;
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #F0D060);
+  background: linear-gradient(135deg, var(--gold), #E0C060, #C8A34D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -767,15 +772,15 @@ section {
 }
 
 .tag--teal {
-  color: var(--teal);
-  border-color: rgba(0, 206, 201, 0.2);
-  background: rgba(0, 206, 201, 0.06);
+  color: var(--pyrite);
+  border-color: rgba(107, 140, 90, 0.25);
+  background: rgba(107, 140, 90, 0.08);
 }
 
 .tag--blue {
-  color: #4DA6FF;
-  border-color: rgba(0, 86, 179, 0.25);
-  background: rgba(0, 86, 179, 0.08);
+  color: #B85A4A;
+  border-color: rgba(139, 58, 46, 0.25);
+  background: rgba(139, 58, 46, 0.08);
 }
 
 /* ── EXPERIENCE ──────────────────────────────── */
@@ -982,7 +987,7 @@ section {
 .contact-heading em {
   font-style: italic;
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #F0D060);
+  background: linear-gradient(135deg, var(--gold), #E0C060, #C8A34D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1020,7 +1025,7 @@ section {
 .contact-link:hover {
   border-color: var(--gold-dim);
   color: var(--gold);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.08);
+  box-shadow: 0 0 20px rgba(200, 163, 77, 0.10);
 }
 
 /* ── FOOTER ──────────────────────────────────── */
