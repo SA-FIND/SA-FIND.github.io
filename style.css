@@ -108,8 +108,8 @@ img {
   display: block;
 }
 
-/* ── AMBIENT BACKGROUND MESH ─────────────────── */
-.ambient-mesh {
+/* ── METALLURGICAL BACKGROUND SYSTEM ─────────── */
+.met-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -117,54 +117,198 @@ img {
   overflow: hidden;
 }
 
-.mesh-orb {
+/* Molten gold flow — slow moving gradient */
+.molten-flow {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  animation: orbFloat 20s ease-in-out infinite;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 50% at 20% 80%, rgba(200, 163, 77, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(212, 200, 77, 0.04) 0%, transparent 55%);
+  animation: moltenDrift 25s ease-in-out infinite;
 }
 
-.mesh-orb--gold {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(200, 163, 77, 0.06) 0%, transparent 70%);
-  top: -10%;
-  right: -15%;
+.molten-flow--2 {
+  background:
+    radial-gradient(ellipse 70% 60% at 70% 70%, rgba(200, 163, 77, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 35% at 10% 30%, rgba(212, 200, 77, 0.03) 0%, transparent 50%);
+  animation: moltenDrift2 30s ease-in-out infinite;
+}
+
+@keyframes moltenDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+  25% { transform: translate(30px, -20px) scale(1.05); opacity: 0.8; }
+  50% { transform: translate(-20px, 15px) scale(0.97); opacity: 1; }
+  75% { transform: translate(15px, 25px) scale(1.03); opacity: 0.85; }
+}
+
+@keyframes moltenDrift2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(-25px, 20px) rotate(1deg) scale(1.04); }
+  66% { transform: translate(20px, -15px) rotate(-1deg) scale(0.96); }
+}
+
+/* Froth flotation layer */
+.froth-layer,
+.gold-flakes,
+.sulfur-layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Froth bubbles — rise from bottom with wobble */
+.froth-bubble {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  left: var(--left);
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%,
+    rgba(224, 192, 96, var(--opacity)),
+    rgba(200, 163, 77, calc(var(--opacity) * 0.3)) 60%,
+    transparent 100%);
+  border: 1px solid rgba(200, 163, 77, calc(var(--opacity) * 0.5));
+  animation: frothRise var(--dur) var(--delay) ease-in infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes frothRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.3);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10vh) translateX(calc(var(--drift) * 0.2)) scale(0.7);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(var(--drift)) scale(1);
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(-85vh) translateX(calc(var(--drift) * 0.5)) scale(1.1);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(calc(var(--drift) * -0.3)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Gold flakes — drift with shimmer rotation */
+.gold-flake {
+  position: absolute;
+  width: var(--size);
+  height: calc(var(--size) * 0.6);
+  top: var(--top);
+  left: var(--left);
+  background: linear-gradient(135deg,
+    rgba(200, 163, 77, var(--opacity)),
+    rgba(224, 192, 96, calc(var(--opacity) * 1.2)),
+    rgba(200, 163, 77, calc(var(--opacity) * 0.5)));
+  border-radius: 1px;
+  animation: flakeDrift var(--dur) var(--delay) linear infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes flakeDrift {
+  0% {
+    transform: translate(0, 0) rotate(var(--rot)) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--opacity);
+  }
+  50% {
+    transform: translate(var(--drift-x), var(--drift-y))
+               rotate(calc(var(--rot) + 180deg))
+               scaleX(0.3);
+    opacity: calc(var(--opacity) * 1.3);
+  }
+  85% {
+    opacity: var(--opacity);
+  }
+  100% {
+    transform: translate(calc(var(--drift-x) * 2), calc(var(--drift-y) * 2))
+               rotate(calc(var(--rot) + 360deg))
+               scaleX(1);
+    opacity: 0;
+  }
+}
+
+/* Sulfur crystal particles — geometric pulse */
+.sulfur-crystal {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: var(--top);
+  left: var(--left);
+  background: rgba(212, 200, 77, calc(var(--opacity) * 0.6));
+  border: 1px solid rgba(212, 200, 77, calc(var(--opacity) * 0.8));
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: sulfurPulse var(--dur) var(--delay) ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes sulfurPulse {
+  0%, 100% {
+    transform: rotate(var(--rot)) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: var(--opacity);
+    transform: rotate(var(--rot)) scale(1);
+  }
+  50% {
+    opacity: calc(var(--opacity) * 1.5);
+    transform: rotate(calc(var(--rot) + 15deg)) scale(1.1);
+    box-shadow: 0 0 8px rgba(212, 200, 77, calc(var(--opacity) * 0.5));
+  }
+  80% {
+    opacity: var(--opacity);
+    transform: rotate(calc(var(--rot) + 30deg)) scale(0.9);
+  }
+}
+
+/* Deep ore glow orbs */
+.ore-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: oreFloat 22s ease-in-out infinite;
+}
+
+.ore-glow--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(200, 163, 77, 0.07) 0%, transparent 70%);
+  top: -5%;
+  right: -10%;
   animation-delay: -3s;
 }
 
-.mesh-orb--blue {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(139, 58, 46, 0.05) 0%, transparent 70%);
-  bottom: 10%;
-  left: -8%;
-  animation-delay: -7s;
-}
-
-.mesh-orb--teal {
+.ore-glow--2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(107, 140, 90, 0.04) 0%, transparent 70%);
-  top: 40%;
-  left: 30%;
-  animation-delay: -14s;
+  background: radial-gradient(circle, rgba(212, 200, 77, 0.05) 0%, transparent 70%);
+  bottom: 5%;
+  left: -8%;
+  animation-delay: -8s;
 }
 
-@keyframes orbFloat {
+.ore-glow--3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(139, 94, 60, 0.04) 0%, transparent 70%);
+  top: 45%;
+  left: 50%;
+  animation-delay: -15s;
+}
 
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  33% {
-    transform: translate(30px, -40px) scale(1.05);
-  }
-
-  66% {
-    transform: translate(-20px, 30px) scale(0.95);
-  }
+@keyframes oreFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(25px, -35px) scale(1.06); }
+  66% { transform: translate(-18px, 25px) scale(0.94); }
 }
 
 /* ── GLASS MIXIN PATTERNS ────────────────────── */
@@ -515,7 +659,7 @@ section {
 .hero-name em {
   font-style: italic;
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #E0C060, #C8A34D);
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright), var(--sulfur));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -778,15 +922,15 @@ section {
 }
 
 .tag--teal {
-  color: var(--pyrite);
-  border-color: rgba(107, 140, 90, 0.25);
-  background: rgba(107, 140, 90, 0.08);
+  color: var(--sulfur);
+  border-color: var(--sulfur-dim);
+  background: rgba(212, 200, 77, 0.06);
 }
 
 .tag--blue {
-  color: #B85A4A;
-  border-color: rgba(139, 58, 46, 0.25);
-  background: rgba(139, 58, 46, 0.08);
+  color: var(--ore);
+  border-color: rgba(139, 94, 60, 0.25);
+  background: rgba(139, 94, 60, 0.08);
 }
 
 /* ── EXPERIENCE ──────────────────────────────── */
@@ -993,7 +1137,7 @@ section {
 .contact-heading em {
   font-style: italic;
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold), #E0C060, #C8A34D);
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright), var(--sulfur));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
