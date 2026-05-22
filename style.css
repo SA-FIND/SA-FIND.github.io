@@ -39,27 +39,30 @@
   --r-full: 100px;
 }
 
-/* ── LIGHT MODE — Ashanti Sandstone & Parchment ─ */
+/* ── LIGHT MODE — Gold Dust & Parchment ──────── */
 [data-theme="light"] {
-  --bg: #FAF7F0;
-  --bg-elevated: #EFE9DC;
-  --surface: rgba(139, 58, 46, 0.03);
-  --surface-glass: rgba(250, 247, 240, 0.70);
-  --surface-glass-hover: rgba(250, 247, 240, 0.85);
+  --bg: #FBF8EE;
+  --bg-elevated: #F0EADB;
+  --surface: rgba(200, 163, 77, 0.05);
+  --surface-glass: rgba(251, 248, 238, 0.75);
+  --surface-glass-hover: rgba(251, 248, 238, 0.88);
   --gold: #A6832A;
-  --gold-dim: rgba(166, 131, 42, 0.12);
-  --gold-glow: rgba(166, 131, 42, 0.22);
+  --gold-bright: #C8A34D;
+  --gold-dim: rgba(166, 131, 42, 0.14);
+  --gold-glow: rgba(166, 131, 42, 0.25);
+  --sulfur: #B0A630;
+  --sulfur-dim: rgba(176, 166, 48, 0.12);
   --text: #2A2517;
   --text-muted: #6B6150;
   --text-dim: #B5AB98;
-  --border-glass: rgba(42, 37, 23, 0.08);
-  --border-glass-strong: rgba(42, 37, 23, 0.13);
-  --nav-bg: rgba(250, 247, 240, 0.65);
-  --nav-bg-scroll: rgba(250, 247, 240, 0.85);
-  --photo-fade: rgba(250, 247, 240, 0.35);
+  --border-glass: rgba(200, 163, 77, 0.10);
+  --border-glass-strong: rgba(200, 163, 77, 0.16);
+  --nav-bg: rgba(251, 248, 238, 0.68);
+  --nav-bg-scroll: rgba(251, 248, 238, 0.88);
+  --photo-fade: rgba(251, 248, 238, 0.35);
   --overlay-bg: rgba(0, 0, 0, 0.15);
-  --refraction: rgba(200, 163, 77, 0.15);
-  --refraction-soft: rgba(200, 163, 77, 0.08);
+  --refraction: rgba(200, 163, 77, 0.18);
+  --refraction-soft: rgba(200, 163, 77, 0.10);
 }
 
 /* ── RESET ───────────────────────────────────── */
