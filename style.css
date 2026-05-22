@@ -1,30 +1,33 @@
 /* ══════════════════════════════════════════════════
-   LIQUID GLASS — AngloGold Ashanti Mine Inspired
-   Dark/Light mode with mineshaft depth & bullion gold
+   LIQUID GLASS — Gold & Sulfur · Metallurgical Edition
+   Froth flotation, gold bullion, sulfur crystalline
    ══════════════════════════════════════════════════ */
 :root {
-  --bg: #0D0E0A;
-  --bg-elevated: #1A1B15;
-  --surface: rgba(200, 163, 77, 0.03);
-  --surface-glass: rgba(200, 163, 77, 0.05);
-  --surface-glass-hover: rgba(200, 163, 77, 0.09);
+  --bg: #0A0B07;
+  --bg-elevated: #15160F;
+  --surface: rgba(200, 163, 77, 0.04);
+  --surface-glass: rgba(200, 163, 77, 0.06);
+  --surface-glass-hover: rgba(200, 163, 77, 0.10);
   --gold: #C8A34D;
+  --gold-bright: #E0C060;
   --gold-dim: rgba(200, 163, 77, 0.15);
   --gold-glow: rgba(200, 163, 77, 0.30);
-  --ore: #8B3A2E;
-  --pyrite: #6B8C5A;
+  --sulfur: #D4C84D;
+  --sulfur-dim: rgba(212, 200, 77, 0.15);
+  --sulfur-glow: rgba(212, 200, 77, 0.20);
+  --ore: #8B5E3C;
   --green: #7A9E68;
-  --text: #DDD8CB;
-  --text-muted: #8A8473;
-  --text-dim: #504B3F;
-  --border-glass: rgba(200, 163, 77, 0.08);
-  --border-glass-strong: rgba(200, 163, 77, 0.14);
-  --nav-bg: rgba(13, 14, 10, 0.60);
-  --nav-bg-scroll: rgba(13, 14, 10, 0.82);
-  --photo-fade: rgba(13, 14, 10, 0.5);
-  --overlay-bg: rgba(0, 0, 0, 0.45);
-  --refraction: rgba(200, 163, 77, 0.10);
-  --refraction-soft: rgba(200, 163, 77, 0.05);
+  --text: #E8E2D0;
+  --text-muted: #9B9382;
+  --text-dim: #564F42;
+  --border-glass: rgba(200, 163, 77, 0.10);
+  --border-glass-strong: rgba(200, 163, 77, 0.18);
+  --nav-bg: rgba(10, 11, 7, 0.65);
+  --nav-bg-scroll: rgba(10, 11, 7, 0.88);
+  --photo-fade: rgba(10, 11, 7, 0.5);
+  --overlay-bg: rgba(0, 0, 0, 0.50);
+  --refraction: rgba(200, 163, 77, 0.12);
+  --refraction-soft: rgba(200, 163, 77, 0.06);
   --font: 'Manrope', system-ui, -apple-system, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
