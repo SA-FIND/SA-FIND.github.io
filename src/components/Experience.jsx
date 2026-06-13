@@ -15,9 +15,8 @@ const EXPERIENCES = [
     period: '2025 – 2026',
     org: 'Kwame Nkrumah University of Science and Technology (KNUST)',
     desc: [
-      'Investigating computational materials discovery and process optimization under Prof. Emmanuel Gikunoo.',
-      'Developed inverse design pipelines for High Entropy Alloys utilizing Genetic Algorithms and Random Forests.',
-      'Designed and fabricated a biomass-derived carbon filtration system optimized via Response Surface Methodology (RSM) with a Face-Centered Central Composite Design.',
+      'Developed computational materials discovery and process optimization using inverse design pipelines for High Entropy Alloys utilizing Genetic Algorithms and Random Forests with project proposal for physical experimental implementation (... Working with Prof. Kwadwo Mensah Darkwah)',
+      'Designed and fabricated a biomass-derived carbon filtration system optimized via Response Surface Methodology (RSM) with a Face-Centered Central Composite Design. (supervised by Prof. Emmanuel Gikunoo)',
     ],
   },
   {
