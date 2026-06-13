@@ -1,16 +1,35 @@
-# React + Vite
+# Solomon Ahedor - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Source code for my personal portfolio website, built with React and Vite. It showcases my background in process metallurgy, computational materials discovery, and ongoing research projects.
 
-Currently, two official plugins are available:
+Live site: [sa-find.github.io](https://sa-find.github.io/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Vanilla CSS 
+- **Deployment:** GitHub Pages (via GitHub Actions)
 
-## React Compiler
+## Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To run this project locally:
 
-## Expanding the ESLint configuration
+1. Clone the repository
+   ```bash
+   git clone https://github.com/SA-FIND/SA-FIND.github.io.git
+   cd SA-FIND.github.io
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+## Contact
+- Email: ahedorsolomon@gmail.com
+- Discord: safind__73430
+- GitHub: [SA-FIND](https://github.com/SA-FIND)
