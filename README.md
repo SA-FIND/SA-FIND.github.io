@@ -1,34 +1,16 @@
-# Solomon Ahedor — Portfolio
+# React + Vite
 
-**Solomon Ahedor**, a final-year Metallurgical Engineering student at KNUST, Ghana, working at the intersection of materials science, AI, and sustainable engineering.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🌐 **[sa-find.github.io](https://sa-find.github.io)**
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Overview
+## React Compiler
 
-This site presents selected research, engineering projects, and professional experience from froth flotation optimisation with machine learning to biomass-derived water filtration systems.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Design
+## Expanding the ESLint configuration
 
-The visual identity follows a **Material Design 3** inspired system documented in [`DESIGN.md`](DESIGN.md):
-
-- **Palette** — M3 tonal surfaces seeded with Deep Indigo Primary (`#1B6B52`)
-- **Typography** — [Manrope](https://fonts.google.com/specimen/Manrope), M3 type scale
-- **Shape** — Pill buttons, 16px card radii, emphasized easing on all motion
-- **Layout** — 1200px max-width, 8px grid, responsive breakpoints at 768px and 1024px
-
-## Structure
-
-```
-├── index.html                    Main page
-├── style.css                     Design tokens + styles
-├── DESIGN.md                     Design system reference
-├── Prophoto.png                  Headshot
-└── SOLOMON_AHEDOR_RESUME.pdf     CV
-```
-
----
-
-© 2026 Solomon Ahedor
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
