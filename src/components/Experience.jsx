@@ -2,6 +2,15 @@ import { useStaggeredInView } from '../hooks/useInView';
 
 const EXPERIENCES = [
   {
+    role: 'Metallurgy & Process Engineering Intern',
+    period: 'Nov 2025 – Dec 2025',
+    org: 'AngloGold Ashanti (Obuasi Mine), Ghana',
+    desc: [
+      'Completed technical rotation through the full refractory gold processing circuit, monitored BIOX bacterial activity, and performed ferrous/ferric ion determinations to optimize sulfide oxidation rates and CIL adsorption efficiency.',
+      'Performed extended flotation tests and Particle Size Analysis (PSA) in the Met-lab to evaluate recovery efficiency and grind kinetics, providing data to refine process settings.',
+    ],
+  },
+  {
     role: 'Undergraduate Researcher',
     period: '2025 – 2026',
     org: 'Kwame Nkrumah University of Science and Technology (KNUST)',
@@ -9,16 +18,6 @@ const EXPERIENCES = [
       'Investigating computational materials discovery and process optimization under Prof. Emmanuel Gikunoo.',
       'Developed inverse design pipelines for High Entropy Alloys utilizing Genetic Algorithms and Random Forests.',
       'Designed and fabricated a biomass-derived carbon filtration system optimized via Response Surface Methodology (RSM) with a Face-Centered Central Composite Design.',
-    ],
-  },
-  {
-    role: 'Technical Intern — Process Metallurgy',
-    period: '2025',
-    org: 'AngloGold Ashanti · Obuasi Mines, Ghana',
-    desc: [
-      'Monitored BIOX bacterial activity and assisted with ferrous/ferric ion determinations to optimize sulfide oxidation rates.',
-      'Assisted with LECO instrumentation (S832 DR/S632) for total sulfur, carbon, and carbonate analysis.',
-      'Completed technical rotation through the full refractory gold processing circuit including Crushing, Milling, Flotation, and CIL operations.',
     ],
   },
   {
