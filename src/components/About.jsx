@@ -32,7 +32,7 @@ const About = () => {
           >
             <div style={tilt.shineStyle} />
             <img
-              src="/Prophoto.png"
+              src="/Prophoto.webp"
               alt="Solomon Ahedor — Material Science Engineer"
               style={styles.img}
               loading="lazy"

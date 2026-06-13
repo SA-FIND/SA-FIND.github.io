@@ -26,7 +26,7 @@ const Navbar = () => {
             setActiveSection(section.id);
           }
         },
-        { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
+        { threshold: 0.15, rootMargin: '-80px 0px -20% 0px' }
       );
       observer.observe(section);
       observers.push(observer);
@@ -48,6 +48,7 @@ const Navbar = () => {
   const handleNavClick = useCallback((e, id) => {
     e.preventDefault();
     setMobileOpen(false);
+    setActiveSection(id);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
