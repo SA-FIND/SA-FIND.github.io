@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import { useMagnetic } from '../hooks/useMouse';
 
@@ -38,6 +38,7 @@ const Contact = () => {
   const { ref, isInView } = useInView({ threshold: 0.15 });
   const ctaMagnetic = useMagnetic(0.3, 120);
   const ctaRef = useRef(null);
+  const [copied, setCopied] = useState(false);
 
   // Ripple effect on CTA click
   const handleRipple = useCallback((e) => {
@@ -82,28 +83,37 @@ const Contact = () => {
 
           {/* Primary CTA */}
           <div style={{ ...reveal(400), textAlign: 'center', marginTop: '2.5rem' }}>
-            <a
+            <button
               ref={(el) => {
                 ctaRef.current = el;
                 ctaMagnetic.ref.current = el;
               }}
-              href="https://discordapp.com/users/safind__73430"
-              target="_blank"
-              rel="noopener noreferrer"
               className="btn btn-primary"
               style={{
                 ...ctaMagnetic.style,
                 fontSize: '1.05rem',
                 padding: '1rem 2.5rem',
+                cursor: 'pointer',
               }}
-              onClick={handleRipple}
+              onClick={(e) => {
+                navigator.clipboard.writeText('safind__73430');
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+                handleRipple(e);
+              }}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              Say Hello
-            </a>
+              {copied ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              )}
+              {copied ? 'Copied Discord ID!' : 'Say Hello'}
+            </button>
           </div>
         </div>
       </div>
