@@ -6,7 +6,7 @@ const LINKS = [
   { label: 'Email', href: 'mailto:ahedorsolomon@gmail.com', external: false },
   { label: 'X (Twitter)', href: 'https://x.com/safinderr', external: true },
   { label: 'GitHub', href: 'https://github.com/SA-FIND', external: true },
-  { label: 'View CV', href: '/SOLOMON_AHEDOR_CV.html', download: false },
+  { label: 'View CV', href: '/SOLOMON_AHEDOR_CV.pdf', download: true },
 ];
 
 const MagneticLink = ({ link }) => {
