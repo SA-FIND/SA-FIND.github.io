@@ -87,7 +87,9 @@ const Contact = () => {
                 ctaRef.current = el;
                 ctaMagnetic.ref.current = el;
               }}
-              href="mailto:ahedorsolomon@gmail.com"
+              href="https://discordapp.com/users/safind__73430"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary"
               style={{
                 ...ctaMagnetic.style,
