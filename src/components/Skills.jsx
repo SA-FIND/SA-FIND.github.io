@@ -2,28 +2,42 @@ import { useStaggeredInView } from '../hooks/useInView';
 
 const SKILL_GROUPS = [
   {
-    title: 'Process Metallurgy & Instrumentation',
+    title: 'Metallurgical Processes',
     skills: [
-      'Extractive Metallurgy',
       'Refractory Ore Processing',
       'Bacterial Oxidation (BIOX)',
       'Froth Flotation',
       'Carbon-in-Leach (CIL)',
-      'LECO S832 DR/S632 (Sulfur/Carbon)',
-      'Atomic Absorption Spectroscopy',
-      'Particle Size Analyzers',
+      'Elution Circuits',
     ],
   },
   {
-    title: 'Computational Materials & Data',
+    title: 'Laboratory Instrumentation',
+    skills: [
+      'LECO S832 DR/S632',
+      'Atomic Absorption Spectroscopy (AAS)',
+      'Particle Size Analyzers',
+      'Optical Microscopy',
+    ],
+  },
+  {
+    title: 'Computational Modeling & Data',
+    skills: [
+      'Python (Pandas, NumPy, Matplotlib)',
+      'Model Predictive Control',
+      'Machine Learning (Scikit-learn)',
+    ],
+  },
+  {
+    title: 'Software & Dev',
     skills: [
       'Python',
-      'Pandas & NumPy',
-      'Machine Learning',
-      'Scikit-learn & XGBoost',
-      'Predictive Modelling',
-      'Genetic Algorithms',
-      'Design Expert (RSM)',
+      'MATLAB',
+      'Design Expert',
+      'Ansys Granta Selector',
+      'yEd Graph Editor',
+      'GitHub',
+      'Microsoft Office',
     ],
   },
 ];
