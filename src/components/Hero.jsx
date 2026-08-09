@@ -1,18 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useMagnetic } from '../hooks/useMouse';
 
-const PHRASES = [
-  'materials science',
-  'machine learning',
-  'sustainable engineering',
-  'process metallurgy',
-  'computational design',
-];
-
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [fadingOut, setFadingOut] = useState(false);
 
   const primaryBtn = useMagnetic(0.25, 100);
   const outlineBtn = useMagnetic(0.25, 100);
@@ -21,18 +11,6 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(timer);
-  }, []);
-
-  // ── Rotating phrases ──
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFadingOut(true);
-      setTimeout(() => {
-        setPhraseIndex(prev => (prev + 1) % PHRASES.length);
-        setFadingOut(false);
-      }, 400);
-    }, 3500);
-    return () => clearInterval(interval);
   }, []);
 
   const stagger = (index) => ({
@@ -46,7 +24,7 @@ const Hero = () => {
       <div className="container" style={styles.container}>
         {/* Eyebrow */}
         <span style={{ ...styles.eyebrow, ...stagger(0) }}>
-          Material Science Engineer
+          Metallurgical Engineer
         </span>
 
         {/* Title */}
@@ -55,18 +33,9 @@ const Hero = () => {
           <span className="shimmer-text" style={styles.accent}>Ahedor</span>
         </h1>
 
-        {/* Descriptor with rotating phrase */}
+        {/* Descriptor */}
         <p style={{ ...styles.descriptor, ...stagger(2) }}>
-          Final-year Material Science Engineering student at KNUST, Ghana.
-          I work at the intersection of{' '}
-          <span style={{
-            ...styles.rotatingPhrase,
-            opacity: fadingOut ? 0 : 1,
-            transform: fadingOut ? 'translateY(-8px)' : 'translateY(0)',
-          }}>
-            {PHRASES[phraseIndex]}
-          </span>
-          {' '}— designing systems that extract value from waste and intelligence from data.
+          Metallurgical Engineering, KNUST Ghana. Building ML pipelines for mineral processing and materials discovery. Open to PhD opportunities in computational materials and mineral processing ML.
         </p>
 
         {/* CTA buttons with magnetic hover */}
@@ -144,12 +113,6 @@ const styles = {
     marginBottom: '3rem',
     maxWidth: '620px',
     lineHeight: 1.8,
-  },
-  rotatingPhrase: {
-    display: 'inline-block',
-    color: '#d4a843',
-    fontWeight: 600,
-    transition: 'opacity 0.4s ease, transform 0.4s ease',
   },
   cta: {
     display: 'flex',

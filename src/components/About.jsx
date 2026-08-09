@@ -48,7 +48,7 @@ const About = () => {
           <h2 style={reveal(180)}>Materials scientist.<br />Builder. Researcher.</h2>
 
           <p style={{ ...styles.p, ...reveal(260) }}>
-            I am a final-year <strong>Material Science Engineering</strong> student at the <strong>Kwame Nkrumah University of Science and Technology (KNUST)</strong>, graduating in September 2026. My research is supervised by <strong>Prof. Emmanuel Gikunoo</strong> and spans water treatment, process optimisation, and computational materials.
+            I am a final-year <strong>Metallurgical Engineering</strong> student at the <strong>Kwame Nkrumah University of Science and Technology (KNUST)</strong>, graduating in September 2026. My research is supervised by <strong>Prof. Emmanuel Gikunoo</strong> and spans water treatment, process optimisation, and computational materials.
           </p>
 
           <p style={{ ...styles.p, ...reveal(340) }}>
