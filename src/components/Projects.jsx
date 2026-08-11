@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     id: '02',
     title: 'Biomass-Derived Carbon Filter for Turbid Water Treatment',
-    desc: 'Designing and fabricating a low-cost water filtration system using coconut shell activated carbon (CSAC). Employed Response Surface Methodology with a Face-Centered Central Composite Design (CCD) in Design Expert to optimise adsorption parameters.',
+    desc: 'Designed and fabricated a low-cost water filtration system using coconut shell activated carbon (CSAC). Employed Response Surface Methodology with a Face-Centered Central Composite Design (CCD) in Design Expert to optimise adsorption parameters.',
     tags: ['RSM / CCD', 'Agricultural Waste', 'Water Treatment'],
   },
   {
