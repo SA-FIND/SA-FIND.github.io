@@ -158,8 +158,8 @@ const PROJECTS = [
   {
     id: '03',
     title: 'Machine Learning for Froth Flotation Optimisation',
-    desc: 'Developed a three-tier LOOCV modelling framework applied to UG2 circuit data from Rustenburg Platinum Mines. Built XGBoost models with engineered lag features for predicting silica and iron concentrate grade.',
-    tags: ['XGBoost', 'Froth Flotation', 'Predictive Modelling'],
+    desc: 'Developed a three-tier LOOCV modelling framework for grade and recovery prediction in froth flotation. Applied to UG2 platinum circuits (Rustenburg) and iron ore time-series data. Built XGBoost models with engineered lag features for predicting silica and iron concentrate grade and recovery.',
+    tags: ['XGBoost', 'Froth Flotation', 'Time-Series Forecasting'],
     github: 'https://github.com/SA-FIND/Flotation-Optimisation',
   },
 ];
